@@ -7,7 +7,7 @@ import {
   formContainer,
 } from "../assets/Form.module.scss";
 
-const Form = () => {
+const FormComponent = () => {
   return (
     <div className={formContainer}>
       <h2>All List of Tasks</h2>
@@ -26,4 +26,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormComponent;

@@ -1,11 +1,12 @@
 import React from "react";
-import Form from "./components/Form";
+import FormComponent from "./components/FormComponent";
+import HeaderComponent from "./components/HeaderComponent";
 import { main } from "./App.module.scss";
-
 function App() {
   return (
     <main className={main}>
-      <Form />
+        <HeaderComponent />
+      <FormComponent />
     </main>
   );
 }
