@@ -39,6 +39,8 @@ You may also see any lint errors in the console.
 ![image](https://user-images.githubusercontent.com/87057752/169975697-9c070909-c517-45e2-8872-aa03ebc74360.png)
 
 ##Sample Image [Mobile]
+
+
 ![image](https://user-images.githubusercontent.com/87057752/169976228-dd0e873e-6092-4c1c-ba8b-7d544b64e039.png)
 
 
