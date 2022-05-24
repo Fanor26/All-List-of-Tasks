@@ -1,0 +1,14 @@
+@import './styles/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "poppins";
+}
+.main {
+  background-color: $dark_blue;
+  width: 100vw;
+  height: 100vh;
+}

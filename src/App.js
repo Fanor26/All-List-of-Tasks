@@ -1,9 +1,12 @@
-import React, from "react";
+import React from "react";
+import Form from "./components/Form";
+import { main } from "./App.module.scss";
+
 function App() {
   return (
-   <div>
-     initialization All List of Tasks
-   </div>
+    <main className={main}>
+      <Form />
+    </main>
   );
 }
 
