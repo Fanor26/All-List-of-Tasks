@@ -5,21 +5,25 @@ import {main}  from "./App.module.scss";
 import HeaderComponent from "./components/HeaderComponent";
 function App() {
     let [listTask, setListTask]= useState([]);
-    const handlerNewTask = (task) =>{
+    const newTaskHandler = (task) =>{
         listTask = [...listTask, task]
         setListTask(listTask);
 
     }
-    const removeTask = (id) => {
-        const newTasks = [...listTask].filter((task) => task.id !== id);
-        setListTask(newTasks);
-    };
+
+    const deleteTaskHander = (id) => {
+        const newlistTask = listTask.filter( items => {
+          return id !== items.id;
+        });
+        setListTask(newlistTask);
+      }
 
     return (
         <main className={main}>
             <HeaderComponent />
-            <FormComponent handlerNewTask={handlerNewTask}/>
-            <TodoLisComponent list={listTask} removeTask={removeTask}/>
+            <FormComponent newTaskHandler={newTaskHandler}/>
+            <TodoLisComponent list={listTask}
+             deleteTaskHander={deleteTaskHander}/>
         </main>
     );
 }

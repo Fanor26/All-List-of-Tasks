@@ -4,7 +4,7 @@ const HeaderComponent = () => {
     return (
         <div className={headerContainer}>
             <h2>
-                @DevFanor</h2>
+                TODO LIST REACTJS 2022</h2>
         </div>
     );
 };

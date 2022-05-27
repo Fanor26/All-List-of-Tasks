@@ -1,24 +1,20 @@
-import React from 'react';
-import TaskComponent from './TaskComponent';
+import React from "react";
+import TaskComponent from "./TaskComponent";
 
-import {todolistContainer} from '../assets/TodoList.module.scss';
+import { todolistContainer } from "../assets/TodoList.module.scss";
 
-const TodoListComponent = ({list, removeTask}) => {
-    list.map(id => {
-            console.log("item -> :", id)
-
-        }
-
-    )
-    return (
-        <div className={todolistContainer}>
-
-            {list &&
-                list.map(id =><TaskComponent  removetask={() => removeTask ()} tasks={id}/>)}
-
-
-        </div>
-    );
+const TodoListComponent = ({ list, deleteTaskHander }) => {
+  return (
+    <div className={todolistContainer}>
+      {list.map((item) => (
+        <TaskComponent
+          key={item.id}
+          tasks={item}
+          deleteTaskHander={deleteTaskHander}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default TodoListComponent;

@@ -1,11 +1,12 @@
 
 import React from 'react';
 import useForm from "../hooks/useForm";
+import TaskModel from "../models/TaskModel";
 
 
 import { title, tasknames, forms,inputsContainer,formContainer, submitButton} from '../assets/Form.module.scss';
 
-const FormComponent = ({handlerNewTask}) => {
+const FormComponent = ({newTaskHandler}) => {
   const [form, handlerChangeForm, handlerResetForm] = useForm({ taskname: "" });
   const {taskname} = form;
 
@@ -13,7 +14,10 @@ const FormComponent = ({handlerNewTask}) => {
     e.preventDefault();
 
     handlerResetForm();
-    handlerNewTask(taskname)
+    if (taskname !== '') {
+      const taskModel = new TaskModel(taskname);
+      newTaskHandler(taskModel);
+  }
   };
   return (
       <div className={formContainer} onSubmit={handlerSubmit}>
