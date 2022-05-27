@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeaderComponent from "./components/HeaderComponent";
 import FormComponent from "./components/FormComponent";
 import TodoLisComponent from "./components/TodoListComponent";
@@ -14,10 +14,15 @@ const store = (listData) => {
 function App() {
     console.log('call App')
     let [listTask, setListTask] = useState(getStore());
+    useEffect(() => {
+        store(listTask);
+      }, [listTask]);
+      
+
     const newTaskHandler = (task) =>{
         listTask = [...listTask, task]
         setListTask(listTask);
-        store(listTask);
+       
 
     }
 
@@ -26,7 +31,7 @@ function App() {
           return id !== items.id;
         });
         setListTask(newlistTask);
-        store(newlistTask);
+        
       }
       const updateTaskHandler = (id) => {
         const newListTask = listTask.map(item => {
@@ -36,7 +41,7 @@ function App() {
           return item;
         });
         setListTask(newListTask);
-        store(newListTask);
+        
       }
 
     return (
