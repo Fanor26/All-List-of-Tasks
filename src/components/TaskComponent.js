@@ -3,13 +3,16 @@ import {   taskCard,
     titleCard,
     titleContainer, button} from '../assets/Task.module.scss';
 
-const TaskComponent = ({tasks, deleteTaskHander}) => {
-    const {id, taskName} = tasks;
+const TaskComponent = ({tasks, deleteTaskHander,  updateTaskHandler}) => {
+    const {id, taskName, state} = tasks;
     return (
         <div className={taskCard}>
             <div className={titleContainer}>
                 <div className={titleCard}>
-                    <p>{taskName} </p>
+                <p className={ state?'textThrough': ''} onDoubleClick={() => {
+            updateTaskHandler(id);
+                 }}>
+                    {taskName} </p>
                 </div>
 
                 <div>

@@ -3,7 +3,7 @@ import TaskComponent from "./TaskComponent";
 
 import { todolistContainer } from "../assets/TodoList.module.scss";
 
-const TodoListComponent = ({ list, deleteTaskHander }) => {
+const TodoListComponent = ({ list, deleteTaskHander, updateTaskHandler }) => {
   return (
     <div className={todolistContainer}>
       {list.map((item) => (
@@ -11,6 +11,7 @@ const TodoListComponent = ({ list, deleteTaskHander }) => {
           key={item.id}
           tasks={item}
           deleteTaskHander={deleteTaskHander}
+          updateTaskHandler={updateTaskHandler}
         />
       ))}
     </div>
