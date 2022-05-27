@@ -36,12 +36,13 @@ You may also see any lint errors in the console.
 
 
 ##Sample Image [desktop]
-![image](https://user-images.githubusercontent.com/87057752/169975697-9c070909-c517-45e2-8872-aa03ebc74360.png)
+
+![image](https://user-images.githubusercontent.com/87057752/170626782-e98defd1-d380-4c7f-b5c4-19067b2032dd.png)
 
 ##Sample Image [Mobile]
 
 
-![image](https://user-images.githubusercontent.com/87057752/169976228-dd0e873e-6092-4c1c-ba8b-7d544b64e039.png)
+![image](https://user-images.githubusercontent.com/87057752/170627130-b89e3bd3-0bd6-4b91-9260-00ef5fb5e341.png)
 
 
 🐻‍❄️ Visit me:
